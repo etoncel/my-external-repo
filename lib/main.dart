@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_widgets/my_widgets.dart';
-import 'dart:js' as js;
 
 void main() {
   runApp(const MyApp());
@@ -32,19 +31,9 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("App"),
       ),
-      body: Column(
+      body: const Column(
         children: [
-          const MyWidget(),
-          TextButton(
-            onPressed: () {
-              // js.context.callMethod(
-              // 'open', ['https://stackoverflow.com/questions/ask']);
-              const url =
-                  'https://stackoverflow.com/questions/ask/password: sksksk';
-              js.context.callMethod('open', ['$url', '_self']);
-            },
-            child: Text("Abrir web JS"),
-          )
+          MyWidget(),
         ],
       ),
     );
